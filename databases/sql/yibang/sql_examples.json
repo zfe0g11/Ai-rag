@@ -1,0 +1,77 @@
+[
+  {
+    "question": "查询所有汽车的名称和价格",
+    "sql": "SELECT name, price FROM car",
+    "database": "mysql"
+  },
+  {
+    "question": "查找价格大于10万的汽车",
+    "sql": "SELECT * FROM car WHERE price > 100000",
+    "database": "mysql"
+  },
+  {
+    "question": "查询每个分类的汽车数量",
+    "sql": "SELECT c.name, COUNT(car.id) as car_count FROM category c LEFT JOIN car ON c.id = car.category_id GROUP BY c.id, c.name",
+    "database": "mysql"
+  },
+  {
+    "question": "查找状态为1的汽车",
+    "sql": "SELECT * FROM car WHERE status = 1",
+    "database": "mysql"
+  },
+  {
+    "question": "查询价格最高的前5辆汽车",
+    "sql": "SELECT * FROM car ORDER BY price DESC LIMIT 5",
+    "database": "mysql"
+  },
+  {
+    "question": "查询某个员工的所有信息",
+    "sql": "SELECT * FROM employee WHERE name = '张三'",
+    "database": "mysql"
+  },
+  {
+    "question": "查询价格在5万到20万之间的汽车",
+    "sql": "SELECT * FROM car WHERE price BETWEEN 50000 AND 200000",
+    "database": "mysql"
+  },
+  {
+    "question": "查询库存少于10的汽车",
+    "sql": "SELECT * FROM car WHERE stock < 10",
+    "database": "mysql"
+  },
+  {
+    "question": "查询每个品牌的汽车数量",
+    "sql": "SELECT brand_id, COUNT(*) as car_count FROM car GROUP BY brand_id",
+    "database": "mysql"
+  },
+  {
+    "question": "查询员工总数",
+    "sql": "SELECT COUNT(*) as employee_count FROM employee",
+    "database": "mysql"
+  },
+  {
+    "question": "查询最近30天创建的汽车",
+    "sql": "SELECT * FROM car WHERE create_time >= DATE_SUB(NOW(), INTERVAL 30 DAY)",
+    "database": "mysql"
+  },
+  {
+    "question": "查询分类名称为'轿车'的汽车",
+    "sql": "SELECT car.* FROM car JOIN category c ON car.category_id = c.id WHERE c.name = '轿车'",
+    "database": "mysql"
+  },
+  {
+    "question": "查询员工的姓名和手机号码",
+    "sql": "SELECT name, phone FROM employee",
+    "database": "mysql"
+  },
+  {
+    "question": "查询价格低于平均价格的汽车",
+    "sql": "SELECT * FROM car WHERE price < (SELECT AVG(price) FROM car)",
+    "database": "mysql"
+  },
+  {
+    "question": "查询每个型号的汽车平均价格",
+    "sql": "SELECT model_id, AVG(price) as avg_price FROM car GROUP BY model_id",
+    "database": "mysql"
+  }
+]

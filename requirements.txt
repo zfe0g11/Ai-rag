@@ -1,0 +1,9 @@
+unstructured
+langchain-community
+langchain-text-splitters
+langchain-core
+langchain-openai
+langchain-qdrant
+qdrant-client
+python-docx
+openai

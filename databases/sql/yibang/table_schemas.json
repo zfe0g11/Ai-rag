@@ -1,0 +1,53 @@
+[
+  {
+    "table_name": "car",
+    "description": "汽车信息表",
+    "columns": [
+      {"name": "id", "type": "bigint", "description": "汽车ID，主键，自动递增"},
+      {"name": "name", "type": "varchar(64)", "description": "汽车名称，唯一"},
+      {"name": "brand_id", "type": "bigint", "description": "品牌ID，外键"},
+      {"name": "model_id", "type": "bigint", "description": "型号ID，外键"},
+      {"name": "price", "type": "decimal(10,2)", "description": "汽车价格"},
+      {"name": "image", "type": "varchar(255)", "description": "汽车图片URL"},
+      {"name": "description", "type": "varchar(255)", "description": "汽车描述"},
+      {"name": "status", "type": "int", "description": "状态，默认1"},
+      {"name": "create_time", "type": "datetime", "description": "创建时间"},
+      {"name": "update_time", "type": "datetime", "description": "更新时间"},
+      {"name": "create_user", "type": "bigint", "description": "创建用户ID"},
+      {"name": "update_user", "type": "bigint", "description": "更新用户ID"}
+    ]
+  },
+  {
+    "table_name": "category",
+    "description": "分类信息表",
+    "columns": [
+      {"name": "id", "type": "bigint", "description": "分类ID，主键，自动递增"},
+      {"name": "type", "type": "int", "description": "分类类型"},
+      {"name": "name", "type": "varchar(32)", "description": "分类名称，唯一"},
+      {"name": "sort", "type": "int", "description": "排序，默认0"},
+      {"name": "status", "type": "int", "description": "状态，默认1"},
+      {"name": "create_time", "type": "datetime", "description": "创建时间"},
+      {"name": "update_time", "type": "datetime", "description": "更新时间"},
+      {"name": "create_user", "type": "bigint", "description": "创建用户ID"},
+      {"name": "update_user", "type": "bigint", "description": "更新用户ID"}
+    ]
+  },
+  {
+    "table_name": "employee",
+    "description": "员工信息表",
+    "columns": [
+      {"name": "id", "type": "bigint", "description": "员工ID，主键，自动递增"},
+      {"name": "name", "type": "varchar(32)", "description": "员工姓名"},
+      {"name": "username", "type": "varchar(32)", "description": "用户名，唯一"},
+      {"name": "password", "type": "varchar(64)", "description": "密码"},
+      {"name": "phone", "type": "varchar(11)", "description": "手机号码"},
+      {"name": "sex", "type": "varchar(2)", "description": "性别"},
+      {"name": "id_number", "type": "varchar(18)", "description": "身份证号码"},
+      {"name": "status", "type": "int", "description": "状态，默认1"},
+      {"name": "create_time", "type": "datetime", "description": "创建时间"},
+      {"name": "update_time", "type": "datetime", "description": "更新时间"},
+      {"name": "create_user", "type": "bigint", "description": "创建用户ID"},
+      {"name": "update_user", "type": "bigint", "description": "更新用户ID"}
+    ]
+  }
+]
